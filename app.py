@@ -4,7 +4,7 @@ import asyncio
 from crewai import Agent, Task, Crew, Process
 from crewai_tools import SerperDevTool, ScrapeWebsiteTool
 from crewai_tools import PDFSearchTool
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.schema.runnable import RunnableMap
@@ -17,9 +17,10 @@ from langchain_core.output_parsers import StrOutputParser
 nest_asyncio.apply()
 
 # Load environment variables
-load_dotenv()
+# load_dotenv()
+GOOGLE_API_TOKEN=st.secrets['GOOGLE_API']
+os.environ['GOOGLE_API_KEY'] = GOOGLE_API_TOKEN
 
-os.environ['GOOGLE_API_KEY']=os.getenv("GOOGLE_API_KEY")
 # Initialize the LLM (Generative AI model)
 llm = ChatGoogleGenerativeAI(
     model="gemini-1.5-flash",
@@ -29,7 +30,9 @@ llm = ChatGoogleGenerativeAI(
 )
 
 # Define tools and agents
-os.environ['SERPER_API_KEY'] = os.getenv('SERPER_API_KEY')
+SERPER_API_Key=st.secrets['SERPER_API']
+os.environ['SERPER_API_KEY'] = SERPER_API_Key
+
 search_tool = SerperDevTool()
 scrape_tool = ScrapeWebsiteTool()
 
