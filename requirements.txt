@@ -119,7 +119,7 @@ kubernetes==31.0.0
 lancedb==0.5.7
 langchain==0.1.20
 langchain-cohere==0.1.5
-langchain-community==0.0.29
+langchain-community==0.0.38
 langchain-core==0.1.52
 langchain-google-genai==1.0.4
 langchain-openai==0.1.7
@@ -233,7 +233,6 @@ python-rapidjson==1.20
 pytils==0.4.1
 pytube==15.0.0
 pytz==2024.2
-pywin32==306
 PyYAML==6.0.2
 pyzmq==26.2.0
 RapidFuzz==3.10.0
@@ -329,3 +328,4 @@ webencodings==0.5.1
 yarg==0.1.9
 chroma-hnswlib==0.7.3
 chromadb==0.4.24
+pysqlite3-binary
