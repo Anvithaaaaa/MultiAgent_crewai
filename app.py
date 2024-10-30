@@ -36,7 +36,7 @@ os.environ['SERPER_API_KEY'] = SERPER_API_Key
 search_tool = SerperDevTool()
 scrape_tool = ScrapeWebsiteTool()
 
-rag_tool = PDFSearchTool(pdf="C://Users//aakarsh//Downloads//us-ai-institute-gen-ai-use-cases.pdf",
+rag_tool = PDFSearchTool(pdf="us-ai-institute-gen-ai-use-cases.pdf",
     config=dict(
         llm=dict(
             provider="google", # or google, openai, anthropic, llama2, ...
